@@ -4,7 +4,7 @@
 * String email @Unique @NotNull
 * String phone @Unique @NotNull
 * String password @Encrypt
-* Boolean isWork default false
+* Integer status default '下班' `['下班', '上班', '迟到', '请假']`
 * Integer 职位 default '泊车仔'   
 
 ### Order
@@ -15,7 +15,7 @@
 * Integer type @NotNull
 * Long createAt @NotNull (创建时间)
 * Long appointTime @NotNull
-* Integer status default '无人处理'
+* Integer status default '无人处理' `['派单中', '无人处理', '已完成']`
 
 ### Parking lot
 * Long id
