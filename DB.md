@@ -12,9 +12,9 @@
 * Long employeeId
 * Long userId @NotNull
 * Long parkingLotId 
-* String CarNo @NotNull
-* Long endTime (结束时间)
-* Long startTime @NotNull (创建时间)
+* String carNumber @NotNull
+* Long endAt (结束时间)
+* Long createAt @NotNull (创建时间)
 * Long appointTime @NotNull (预约时间)
 * String appointAddress @NotNull (预约交车地点)
 * Integer status default '无人处理' `['无人处理', '停车中', '已停车', '取车中', '已完成']`
