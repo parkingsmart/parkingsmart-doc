@@ -9,13 +9,25 @@
 
 ### Order
 * Long id
-* String CarNo @NotNull
-* Long parkingLotId 
 * Long employeeId
-* Integer type @NotNull
-* Long createAt @NotNull (创建时间)
-* Long appointTime @NotNull
-* Integer status default '无人处理' `['派单中', '无人处理', '已完成']`
+* Long userId @NotNull
+* Long parkingLotId 
+* String CarNo @NotNull
+* Long endTime (结束时间)
+* Long startTime @NotNull (创建时间)
+* Long appointTime @NotNull (预约时间)
+* String appointAddress @NotNull (预约交车地点)
+* Integer status default '无人处理' `['无人处理', '停车中', '已停车', '取车中', '已完成']`
+> 无人处理: 用户下单, 还没小哥抢单
+> 停车中:   小哥抢单后
+> 已停车:   小哥点击已停车按钮
+> 取车中:   用户点取车按钮
+> 已完成:   小哥点击已取车按钮
+
+### User
+* Long id
+* String password @Encrypt
+* String phone @Unique @NotNull
 
 ### Parking lot
 * Long id
