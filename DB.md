@@ -28,6 +28,7 @@
 * Long id
 * String password @Encrypt
 * String phone @Unique @NotNull
+* Integer integral default >= 0
 
 ### Parking lot
 * Long id
