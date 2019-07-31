@@ -17,6 +17,9 @@
 * Long createAt @NotNull (创建时间)
 * Long appointTime @NotNull (预约时间)
 * String appointAddress @NotNull (预约交车地点)
+* Double amount 
+* Double discountAmount
+* Long promotionId (parking-promotion-id)
 * Integer status default '无人处理' `['无人处理', '停车中', '已停车', '取车中', '已完成']`
 > 无人处理: 用户下单, 还没小哥抢单
 > 停车中:   小哥抢单后
@@ -41,3 +44,25 @@
 ###  Office
 * Integer id
 * String title @NotNull @Unique
+
+### Shop-Promotions
+
+- Long id
+- String title @NotNull
+- Long startTime @NotNull
+- Long endTime @NotNull
+- Integer type default ['抵扣', '折扣']
+- String shopMallName @NotNull
+- Double amount @NotNull
+
+### User-Shop-Promotions
+- Long id
+- Long userId @NotNull
+- Long shopId @NotNull
+- Boolean isActive default true
+
+### Parking-Promotions
+- Long id
+- String title @NotNull @Unique
+- Integer type default ['抵扣', '折扣']
+- Double amount @NotNull
