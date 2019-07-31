@@ -54,6 +54,7 @@
 - Integer type default ['抵扣', '折扣']
 - String shopMallName @NotNull
 - Double amount @NotNull
+- Long redemptionCode @Unique @NotNull
 
 ### User-Shop-Promotions
 - Long id
