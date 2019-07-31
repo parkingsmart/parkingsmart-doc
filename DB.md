@@ -32,6 +32,7 @@
 * String password @Encrypt
 * String phone @Unique @NotNull
 * Integer integral default >= 0
+* String payPassword @Encrypt
 
 ### Parking lot
 * Long id
